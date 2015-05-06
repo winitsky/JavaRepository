@@ -9,8 +9,8 @@ public class FindRadius {
         int a = 10;
         int b = 20;
         int r = 15;
-        double radius;
-        radius = Math.sqrt((a * a + b * b)) / 2;
+        double radius = Math.sqrt((a * a + b * b)) / 2;
+
         if (r >= radius) {
             System.out.println("Окружностью радиусом " + r + " можно закрыть прямоугольник со сторонами " + a + " " + b);
         } else {
