@@ -6,7 +6,7 @@ package lab3;
 public class Seven {
     public static void main(String[] args) {
         int number = 277;
-        if ((number % 10) == 7) {
+        if (number % 10 == 7) {
             System.out.println("полседняя цифра числа " + number + " семь");
         } else {
             System.out.println("полседняя цифра числа " + number + " не семь");
