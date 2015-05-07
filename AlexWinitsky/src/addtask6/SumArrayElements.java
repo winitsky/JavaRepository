@@ -1,7 +1,7 @@
 package addtask6;
 
 /**
- *Найти сумму элементов закрашенной области массива включая диагональ
+ * Найти сумму элементов закрашенной области массива включая диагональ
  */
 public class SumArrayElements {
     public static void main(String[] args) {
