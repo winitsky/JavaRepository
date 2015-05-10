@@ -6,14 +6,15 @@ package lab10;
  */
 public class SimpleNumber {
     public static void main(String[] args) {
-        int number = 17;
-        boolean flag = true;
+        int number = 18;
+        boolean simpleNumber = true;
         for (int i = 2; i < number; i++) {
             if ((number % i) == 0) {
-                flag = false;
+                simpleNumber = false;
+                break;
             }
         }
-        if (flag) {
+        if (simpleNumber) {
             System.out.println("Число " + number + " простое");
         } else {
             System.out.println("Число " + number + " составное");
