@@ -8,18 +8,18 @@ public class DivisionThree {
 
     public static void main(String[] args) {
         int sum = 0;
-        int j = 0;
-        int n = 3;
-        int i = 1;
+        int dividedByThree = 0;
+        int amountOfNumbers = 3;
+        int number = 1;
 
-        while (j < n) {
-            int x = i % 3;
-            if (x == 0) {
-                j++;
-                sum = sum + i;
+        while (dividedByThree < amountOfNumbers) {
+            int tempNumber = number % 3;
+            if (tempNumber == 0) {
+                dividedByThree++;
+                sum = sum + number;
             }
-            i++;
+            number++;
         }
-        System.out.println("Сумма первых " + n + " чисел которые делятся на 3 = " + sum);
+        System.out.println("Сумма первых " + amountOfNumbers + " чисел которые делятся на 3 = " + sum);
     }
 }
