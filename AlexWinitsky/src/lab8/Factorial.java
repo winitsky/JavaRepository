@@ -8,12 +8,12 @@ public class Factorial {
     public static void main(String[] args) {
         int factorial = 1;
         int sum = 0;
-        int i = 2;
-        int x = (int) (Math.random() * 5);
-        while (x != 0) {
-            sum += x;
-            x = (int) (Math.random() * 5);
+        int number = (int) (Math.random() * 5);
+        while (number != 0) {
+            sum += number;
+            number = (int) (Math.random() * 5);
         }
+        int i = 2;
         while (i <= sum) {
             factorial *= i;
             i++;
