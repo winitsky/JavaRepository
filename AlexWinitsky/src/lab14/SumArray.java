@@ -6,27 +6,27 @@ package lab14;
  */
 public class SumArray {
     public static void main(String[] args) {
-        int myarray[] = {2, 3, 7, 9, 10, 9, 2, 6, 5, 4};
+        int array[] = {2, 3, 7, 5, 9, 10, 9, 2, 6, 5, 4};
         int max = 0;
         int min = 0;
-        int idmax = 0;
-        int idmin = 0;
+        int idMax = 0;
+        int idMin = 0;
         int sum = 0;
 
-        for (int i = 0; i < myarray.length; i++) {
-            if (max < myarray[i]) {
-                max = myarray[i];
-                idmax = i;
+        for (int i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                idMax = i;
             }
-            if (min > myarray[i]) {
-                min = myarray[i];
-                idmin = i;
+            if (min > array[i]) {
+                min = array[i];
+                idMin = i;
             }
         }
 
-        for (int i = (idmin + 1); i < idmax; i++) {
-            sum = sum + myarray[i];
+        for (int i = (idMin + 1); i < idMax; i++) {
+            sum += array[i];
         }
-        System.out.println("Сумма элемнтов массива между минимумом и максимумо = " + sum);
+        System.out.println("Сумма элемнтов массива между минимумом и максимумом = " + sum);
     }
 }
