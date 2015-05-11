@@ -15,10 +15,6 @@ public class FindTegP {
     String findTeg(String str) {
         Pattern pattern = Pattern.compile(REGULAR_EXPRESSION);
         Matcher matcher = pattern.matcher(str);
-        while (matcher.find()){
-            System.out.println(matcher.start()+" "+matcher.end());
-        }
-        matcher.reset();
         return matcher.replaceAll("<p>");
     }
 
