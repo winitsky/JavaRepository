@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
  */
 public class FindTegP {
 
+
     private final String REGULAR_EXPRESSION = "<p\\s.*?>";
 
     String findTeg(String str) {
