@@ -16,7 +16,7 @@ public class DivisionThree {
             int tempNumber = number % 3;
             if (tempNumber == 0) {
                 dividedByThree++;
-                sum = sum + number;
+                sum += number;
             }
             number++;
         }
