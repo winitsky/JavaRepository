@@ -2,13 +2,7 @@ package lab17;
 
 public class NumberOfWords {
 
-    private String str;
-
-    NumberOfWords(String str) {
-        this.str = str;
-    }
-
-    int calculateWords() {
+    public int calculateWords(String str) {
         int number = 0;
         str = str.trim();
         str = str.replaceAll(" +", " ");

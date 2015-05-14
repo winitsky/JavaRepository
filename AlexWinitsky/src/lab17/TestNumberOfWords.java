@@ -8,8 +8,7 @@ package lab17;
 public class TestNumberOfWords {
     public static void main(String[] args) {
         String str = "  Найти в строке не только    запятые, но  и другие знаки   препинания и другое. ";
-        NumberOfWords number=new NumberOfWords(str);
-        System.out.println("Чило слов строке равно " + number.calculateWords());
-
+        NumberOfWords number = new NumberOfWords();
+        System.out.println("Чило слов строке равно " + number.calculateWords(str));
     }
 }
