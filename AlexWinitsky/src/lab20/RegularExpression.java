@@ -9,16 +9,18 @@ import java.util.regex.Pattern;
  * с помощью регулярных выражений и вывести их на страницу
  */
 public class RegularExpression {
-    void findHex(String str) {
+    public void findHex(String str) {
         Pattern pattern = Pattern.compile("(0(x|X)[A-Fa-f0-9]*)");
         Matcher matcher = pattern.matcher(str);
+        boolean find = false;
 
         while (matcher.find()) {
             System.out.println(matcher.group());
+            find = true;
         }
         matcher.reset();
 
-        if (!matcher.find()) {
+        if (!find) {
             System.out.println("Встроке нет шестнадцатеричных чисел");
         }
     }
