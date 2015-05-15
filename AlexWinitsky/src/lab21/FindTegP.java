@@ -13,7 +13,7 @@ public class FindTegP {
 
     private final String REGULAR_EXPRESSION = "<p\\s.*?>";
 
-    String findTeg(String str) {
+    public String findTeg(String str) {
         Pattern pattern = Pattern.compile(REGULAR_EXPRESSION);
         Matcher matcher = pattern.matcher(str);
         return matcher.replaceAll("<p>");
