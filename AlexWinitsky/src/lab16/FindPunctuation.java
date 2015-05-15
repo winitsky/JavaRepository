@@ -13,9 +13,8 @@ public class FindPunctuation {
 
     public int find() {
         int n = 0;
-        char symbol;
         for (int i = 0; i < str.length(); i++) {
-            symbol = str.charAt(i);
+            char symbol = str.charAt(i);
             if (symbol == ',' || symbol == ':' || symbol == '-' || symbol == '.' || symbol == '-') {
                 n++;
             }
