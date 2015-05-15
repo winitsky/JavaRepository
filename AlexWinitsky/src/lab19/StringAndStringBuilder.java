@@ -12,6 +12,7 @@ public class StringAndStringBuilder {
         AdditionString addStr=new AdditionString();
         System.out.println("Время сложение строк с помощью String " + addStr.addString(str));
         System.out.println("Время сложение строк с помощью StringBuilder " + addStr.addStringBuilder(str));
+        System.out.println("Время сложение строк с помощью StringBuffer " + addStr.addStringBuffer(str));
 
 
 
