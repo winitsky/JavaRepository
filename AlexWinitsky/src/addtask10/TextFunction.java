@@ -44,11 +44,11 @@ public class TextFunction {
         return number;
     }
 
-    public String printSentence(String text) {
-        String newText = "";
+    public StringBuilder printSentence(String text) {
+        StringBuilder newText = new StringBuilder();
         String array[] = (text.replaceAll("\\n+", "")).split("\\.+");
         for (int i = 0; i < array.length; i++) {
-            newText += array[i].trim() + "." + " - Количество символов " + array[i].length() + "\n";
+            newText.append(array[i].trim() + "." + " - Количество символов " + array[i].length() + "\n");
         }
         return newText;
     }
