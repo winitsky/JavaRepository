@@ -13,7 +13,7 @@ public class TextFunction {
         System.out.println(matcher.replaceAll(""));
     }
 
-    public void FindAndReplaceWord(String text) {
+    public void findAndReplaceWord(String text) {
         Pattern pattern = Pattern.compile("child");
         Matcher matcher = pattern.matcher(text);
         System.out.println(matcher.replaceAll("children"));
