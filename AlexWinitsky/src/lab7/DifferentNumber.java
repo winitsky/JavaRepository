@@ -9,7 +9,7 @@ public class DifferentNumber {
     public static void main(String[] args) {
         int number = 782512;
         int tempNumber = number;
-        boolean flag = false;
+        boolean naturalNumber = false;
 
         while (tempNumber > 0) {
             int num = tempNumber % 10;
@@ -18,12 +18,12 @@ public class DifferentNumber {
             while (tempNum > 0) {
                 if (num == tempNum % 10) {
                     System.out.println("В числе " + number + " находятся одинаковые цифры " + num);
-                    flag = true;
+                    naturalNumber = true;
                 }
                 tempNum = tempNum / 10;
             }
         }
-        if (!flag) {
+        if (!naturalNumber) {
             System.out.println("В числе " + number + " находятся разные цифры");
         }
     }
