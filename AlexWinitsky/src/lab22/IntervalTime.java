@@ -8,13 +8,13 @@ public class IntervalTime {
     private int minute;
     private int hour;
 
-    IntervalTime(int second) {
+    public IntervalTime(int second) {
         this.hour = second / 360;
         this.minute = (second - this.hour * 360) / 60;
         this.second = (second - this.hour * 360 - this.minute * 60);
     }
 
-    IntervalTime(int second, int minute, int hour) {
+    public IntervalTime(int second, int minute, int hour) {
         this.second = second;
         this.minute = minute;
         this.hour = hour;
@@ -31,7 +31,7 @@ public class IntervalTime {
     }
 
     public int getIntervalInSecond() {
-        return this.hour * 360 + this.minute * 60 + this.second;
+        return hour * 360 + minute * 60 + second;
     }
 
     public int compareInterval(IntervalTime interval) {
