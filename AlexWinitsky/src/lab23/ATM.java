@@ -9,7 +9,7 @@ public class ATM {
     private int banknote100;
 
 
-    ATM(int banknote20, int banknote50, int banknote100) {
+    public ATM(int banknote20, int banknote50, int banknote100) {
         this.banknote20 = banknote20;
         this.banknote50 = banknote50;
         this.banknote100 = banknote100;
@@ -24,28 +24,27 @@ public class ATM {
     }
 
     private boolean checkOrder(int money) {
-        boolean getMoney = true;
+        boolean transaction = true;
         int sum = moneyInATM();
         if (money % 10 != 0) {
-            getMoney = false;
+            transaction = false;
             System.out.println("Нет купюр кратных данной сумме");
         }
         if (money > sum) {
-            getMoney = false;
+            transaction = false;
             System.out.println("В банкомате не достаточно стредств");
         }
-        return getMoney;
+        return transaction;
     }
 
     private int moneyInATM() {
-        return 20 * this.banknote20 + 50 * this.banknote50 + 100 * this.banknote100;
+        return 20 * banknote20 + 50 * banknote50 + 100 * banknote100;
     }
 
     public boolean getMoney(int money) {
-        boolean getMoney = true;
-        getMoney = checkOrder(money);
+        boolean transaction = checkOrder(money);
         int temp = 0;
-        if (getMoney) {
+        if (transaction) {
             if (money % 100 != 0 && money != 10 && money != 30) {
                 temp = money - (100 * (money / 100));
                 if (temp != 10 && temp != 30) {
@@ -74,15 +73,13 @@ public class ATM {
                 }
             }
         }
-        return getMoney;
+        return transaction;
     }
 
+
     private int division20(int number) {
-        if (number % 20 == 0) {
-            return number / 20;
-        } else {
-            return 0;
-        }
+        int result = (number % 20 == 0) ? number / 20 : 0;
+        return result;
     }
 
 
