@@ -7,11 +7,11 @@ package lab18;
 public class TextFromLastLetters {
     public static void main(String[] args) {
         String str = "Найти в строке не только    запятые,, но  и другие знаки: препинания.";
-        LastLetters newstr = new LastLetters();
+        LastLetters newStr = new LastLetters();
 
         System.out.println("Исходный текст");
         System.out.println(str);
-        System.out.println("Текст,составленный из последних букв всех слов: " + newstr.findLastLetters(str));
+        System.out.println("Текст,составленный из последних букв всех слов: " + newStr.findLastLetters(str));
 
     }
 }
