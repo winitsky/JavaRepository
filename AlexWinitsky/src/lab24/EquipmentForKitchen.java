@@ -4,31 +4,31 @@ package lab24;
  * Класс описывающий технику для кухни
  */
 public class EquipmentForKitchen extends DomesticAppliances {
-    protected int value;
-    protected String typeOfControl;
-    protected String classOfEnergy;
+    private int value;
+    private String controlType;
+    private String classOfEnergy;
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setValue(int value) {
+        this.value = value;
     }
 
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
+    public void setControlType(String typeOfControl) {
+        this.controlType = typeOfControl;
     }
 
-    public void setPower(int power) {
-        this.power = power;
+    public void setClassOfEnergy(String classOfEnergy) {
+        this.classOfEnergy = classOfEnergy;
     }
 
-    public int getPower() {
-        return this.power;
+    public int getValue() {
+        return value;
     }
 
-    public String getBrandName() {
-        return this.brandName;
+    public String getControlType() {
+        return controlType;
     }
 
-    public String getColor() {
-        return this.color;
+    public String getClassOfEnergy() {
+        return classOfEnergy;
     }
 }

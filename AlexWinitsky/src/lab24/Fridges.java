@@ -1,7 +1,7 @@
 package lab24;
 
 /**
- *Класс описывающий холодильники
+ * Класс описывающий холодильники
  */
 public class Fridges extends EquipmentForKitchen {
     private int numbersOfCompressor;
@@ -13,11 +13,9 @@ public class Fridges extends EquipmentForKitchen {
         this.numbersOfCompressor = numbersOfCompressor;
         this.numberOfShelfs = numberOfShelfs;
         this.construction = construction;
-        this.value = value;
-        this.typeOfControl = typeOfControl;
-        this.classOfEnergy = classOfEnergy;
-
-
+        setValue(value);
+        setControlType(typeOfControl);
+        setClassOfEnergy(classOfEnergy);
     }
 
 
@@ -27,9 +25,9 @@ public class Fridges extends EquipmentForKitchen {
                 "Количество компресооров=" + numbersOfCompressor +
                 ", Количество полок=" + numberOfShelfs +
                 ", Конструкция=" + construction + '\'' +
-                ", Объем=" + value + '\'' +
-                ", Тип управления=" + typeOfControl + '\'' +
-                ", Класс энергопотребления=" + classOfEnergy + '\'' +
+                ", Объем=" + getValue() + '\'' +
+                ", Тип управления=" + getControlType() + '\'' +
+                ", Класс энергопотребления=" + getClassOfEnergy() + '\'' +
                 '}';
     }
 
