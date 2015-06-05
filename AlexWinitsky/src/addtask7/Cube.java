@@ -13,15 +13,15 @@ public class Cube {
         System.out.println("Создан объект куб, с стороной = " + this.side + " и цветом =  " + this.color);
     }
 
-    public int cubeArea() {
+    public int calculateCubeArea() {
         return 6 * side * side;
     }
 
-    public int cubeVolume() {
+    public int calculateCubeVolume() {
         return side * side * side;
     }
 
-    public void cubeColor(String newColor) {
+    public void changeCubeColor(String newColor) {
         color = newColor;
         System.out.println("Установлен новый цвет куба " + color);
     }

@@ -7,9 +7,9 @@ package addtask7;
 public class TestCube {
     public static void main(String[] args) {
         Cube cube = new Cube(2, "red");
-        System.out.println("Объем куба = " + cube.cubeVolume());
-        System.out.println("Площадь куба = " + cube.cubeArea());
-        cube.cubeColor("blue");
+        System.out.println("Объем куба = " + cube.calculateCubeVolume());
+        System.out.println("Площадь куба = " + cube.calculateCubeArea());
+        cube.changeCubeColor("blue");
 
     }
 }
