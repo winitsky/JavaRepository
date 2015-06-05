@@ -10,14 +10,14 @@ package lab22;
  */
 public class RunIntevalTime {
     public static void main(String[] args) {
-        IntervalTime firstIntervale = new IntervalTime(2400);
+        IntervalTime firstInterval = new IntervalTime(2400);
         IntervalTime secondInterval = new IntervalTime(15, 20, 30);
-        System.out.println("firstIntervale = " + firstIntervale);
+        System.out.println("firstIntervale = " + firstInterval);
         System.out.println("secondInterval = " + secondInterval);
-        System.out.println("Интервал в секундах для первого объекта " + firstIntervale.getIntervalInSecond());
+        System.out.println("Интервал в секундах для первого объекта " + firstInterval.getIntervalInSecond());
         System.out.println("Интервал в секундах для второго объекта " + secondInterval.getIntervalInSecond());
 
-        int number = firstIntervale.compareInterval(secondInterval);
+        int number = firstInterval.compareInterval(secondInterval);
         if (number == 0) {
             System.out.println("Помежутки времени одинаковые");
         } else {
