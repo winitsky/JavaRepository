@@ -13,35 +13,35 @@ import java.util.regex.Pattern;
  */
 public class TextFunction {
 
-    public int numbersOfVowel(String text) {
+    public int calculateVowelNumbers(String text) {
         Pattern vowelLetter = Pattern.compile("[аеёиоуыэюяАЕЁИОУЫЭЮЯ]");
         Matcher matcherVowel = vowelLetter.matcher(text);
 
-        int number = 0;
+        int numberVowel = 0;
         while (matcherVowel.find()) {
-            number++;
+            numberVowel++;
         }
-        return number;
+        return numberVowel;
     }
 
-    public int numberOfConsonants(String text) {
+    public int calculateConsonantsNumbers(String text) {
         Pattern consonants = Pattern.compile("[^аеёиоуыэюя]");
         Matcher matcherConsonants = consonants.matcher(text);
-        int number = 0;
+        int numberConsonants = 0;
         while (matcherConsonants.find()) {
-            number++;
+            numberConsonants++;
         }
-        return number;
+        return numberConsonants;
     }
 
-    public int numberOfGap(String text) {
+    public int calculateGapNumbers(String text) {
         Pattern patternGap = Pattern.compile("[\\s]");
         Matcher matcherGap = patternGap.matcher(text);
-        int number = 0;
+        int numberGap = 0;
         while (matcherGap.find()) {
-            number++;
+            numberGap++;
         }
-        return number;
+        return numberGap;
     }
 
     public StringBuilder printSentence(String text) {

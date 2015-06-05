@@ -16,9 +16,9 @@ public class WorkWithText {
 
         TextFunction textFunctiont = new TextFunction();
 
-        System.out.println("Количсество гласных = " + textFunctiont.numbersOfVowel(text));
-        System.out.println("Количсество согласных = " + textFunctiont.numberOfConsonants(text));
-        System.out.println("Количсество пробелов, абзацев  = " + textFunctiont.numberOfGap(text));
+        System.out.println("Количсество гласных = " + textFunctiont.calculateVowelNumbers(text));
+        System.out.println("Количсество согласных = " + textFunctiont.calculateConsonantsNumbers(text));
+        System.out.println("Количсество пробелов, абзацев  = " + textFunctiont.calculateGapNumbers(text));
         System.out.println("Вывод каждого предложения текста в отдельной̆ строке с указанием количества символов " + textFunctiont.printSentence(text));
 
         System.out.println("Вывод исходного текста без пробелов." + textFunctiont.printTextWithoutGap(text));
