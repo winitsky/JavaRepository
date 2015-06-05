@@ -6,24 +6,23 @@ import java.util.*;
  * Created by Master on 27.05.2015.
  */
 public class FrequencyDictionary {
-    Map<String, Integer> createFrequencyDictionary(String str) {
+    public Map<String, Integer> createFrequencyDictionary(String str) {
         str = str.replaceAll("\\,|\\.+", " ").toLowerCase();
         String array[] = str.replaceAll("  +", " ").split(" ");
         Map<String, Integer> frequenceDictionary = new HashMap<String, Integer>();
-        for (int i = 0; i < array.length; i++) {
+        for (String word : array) {
             int number = 0;
-            for (int j = 0; j < array.length; j++) {
-                if (array[i].compareTo(array[j]) == 0) {
-                    number++;
+            for (String compareWord : array) {
+                if (word.compareTo(compareWord) == 0) {
+                    frequenceDictionary.put(word, ++number);
                 }
             }
-            frequenceDictionary.put(array[i], number);
         }
         return frequenceDictionary;
     }
 
-    public void sortFrequencyDictionary(Map<String, Integer> frequenceDictionary) {
-        List dictionary = new ArrayList(frequenceDictionary.entrySet());
+    public void sortFrequencyDictionary(Map<String, Integer> frequencyDictionary) {
+        List dictionary = new ArrayList(frequencyDictionary.entrySet());
         Collections.sort(dictionary, new Comparator<Map.Entry<String, Integer>>() {
             @Override
             public int compare(Map.Entry<String, Integer> firstWord, Map.Entry<String, Integer> secondWord) {
@@ -34,8 +33,8 @@ public class FrequencyDictionary {
     }
 
 
-    void printFrequencyDictionary(Map<String, Integer> frequenceDictionary) {
-        for (Map.Entry<String, Integer> set : frequenceDictionary.entrySet()) {
+    public void printFrequencyDictionary(Map<String, Integer> frequencyDictionary) {
+        for (Map.Entry<String, Integer> set : frequencyDictionary.entrySet()) {
             System.out.println(set.getKey() + " " + set.getValue());
         }
 
