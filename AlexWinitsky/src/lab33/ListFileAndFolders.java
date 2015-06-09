@@ -5,9 +5,9 @@ import java.io.File;
 /**
  * Created by Master on 08.06.2015.
  */
-public class ListFile {
+public class ListFileAndFolders {
 
-    public void listFilesAndFolders() {
+    public void printFilesAndFolders() {
         File directory = new File("../../../Book");
         File array[] = directory.listFiles();
         StringBuilder listDirectory = new StringBuilder();
