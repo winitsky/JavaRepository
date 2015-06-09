@@ -76,7 +76,6 @@ public class ATM {
         return transaction;
     }
 
-
     private int division20(int number) {
         return (number % 20 == 0) ? number / 20 : 0;
     }

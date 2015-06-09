@@ -10,6 +10,7 @@ package lab23;
  */
 public class RunATM {
     public static void main(String[] args) {
+
         ATM atm = new ATM(100, 50, 20);
         atm.addMoney(20, 30, 50);
         if (atm.transaction(210)) {
