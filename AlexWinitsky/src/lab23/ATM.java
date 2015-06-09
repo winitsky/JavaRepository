@@ -26,7 +26,7 @@ public class ATM {
     private boolean checkOrder(int money) {
         boolean transaction = true;
         int sum = moneyInATM();
-        if (money % 10 != 0) {
+        if (money % 10 != 0 || money < 20) {
             transaction = false;
             System.out.println("Нет купюр кратных данной сумме");
         }
@@ -41,7 +41,7 @@ public class ATM {
         return 20 * banknote20 + 50 * banknote50 + 100 * banknote100;
     }
 
-    public boolean getMoney(int money) {
+    public boolean transaction(int money) {
         boolean transaction = checkOrder(money);
         int temp = 0;
         if (transaction) {
@@ -78,8 +78,7 @@ public class ATM {
 
 
     private int division20(int number) {
-        int result = (number % 20 == 0) ? number / 20 : 0;
-        return result;
+        return (number % 20 == 0) ? number / 20 : 0;
     }
 
 

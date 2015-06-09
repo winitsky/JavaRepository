@@ -12,7 +12,7 @@ public class RunATM {
     public static void main(String[] args) {
         ATM atm = new ATM(100, 50, 20);
         atm.addMoney(20, 30, 50);
-        if (atm.getMoney(210)) {
+        if (atm.transaction(210)) {
             System.out.println("Операция проведена успешно");
         } else {
             System.out.println("Операция не может быть выполнена");
