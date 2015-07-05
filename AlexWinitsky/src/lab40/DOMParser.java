@@ -15,17 +15,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DOMParser {
-    public List<Coordinates> creatParser() {
+    public Document creatParser() {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
         Document doc = null;
-        List<Coordinates> coordinatesList = new ArrayList<>();
+
         try {
             builder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         }
-        File file = new File("./src/lab40/point.xml");
+        File file = new File("AlexWinitsky/src/lab40/point.xml");
         try {
             doc = builder.parse(file);
         } catch (SAXException e) {
@@ -33,7 +33,11 @@ public class DOMParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return doc;
+    }
 
+    public List<Coordinates> parseFile(Document doc) {
+        List<Coordinates> coordinatesList = new ArrayList<>();
         Element root = doc.getDocumentElement();
         NodeList nList = root.getChildNodes();
 

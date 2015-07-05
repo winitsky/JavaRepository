@@ -9,7 +9,7 @@ package lab40;
 public class RunDOMParser {
     public static void main(String[] args) {
         DOMParser domParser = new DOMParser();
-        domParser.printCoordinates(domParser.creatParser());
+        domParser.printCoordinates(domParser.parseFile(domParser.creatParser()));
     }
 
 }
