@@ -9,7 +9,7 @@ public class Expense {
     private int num;
     private String paydata;
     private int reciver;
-    double value;
+    private double value;
     private Data data;
 
     public Expense() {
