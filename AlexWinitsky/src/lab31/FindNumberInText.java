@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
  * Created by Master on 07.06.2015.
  */
 public class FindNumberInText {
-    public StringBuilder readFile() {
+    public StringBuilder readFile(String path) {
         StringBuilder text = new StringBuilder();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("./AlexWinitsky/src/lab31/Text.txt"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             String str = bufferedReader.readLine();
             while (str != null) {
                 text.append(str);
@@ -32,11 +32,11 @@ public class FindNumberInText {
         Matcher matcher = pattern.matcher(str);
         int sum = 0;
         int number = 0;
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        List<Integer> arrayList = new ArrayList<Integer>();
         while (matcher.find()) {
             number = Integer.valueOf(matcher.group());
             arrayList.add(number);
-            sum = sum + number;
+            sum += number;
         }
         System.out.println("Цифры в тексте " + arrayList);
         System.out.println("Сумма цифр из текста " + sum);
