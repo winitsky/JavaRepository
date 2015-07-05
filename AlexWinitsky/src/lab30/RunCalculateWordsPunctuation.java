@@ -6,8 +6,9 @@ package lab30;
  */
 public class RunCalculateWordsPunctuation {
     public static void main(String[] args) {
+        String path = "./AlexWinitsky/src/lab30/Text.txt";
         TextClass textClass = new TextClass();
-        System.out.println("Количестов слов в тексте " + textClass.calculateWords(textClass.readFile()));
-        System.out.println("Количестов знаков припинания в тексте " + textClass.claculatePunctuation(textClass.readFile()));
+        System.out.println("Количестов слов в тексте " + textClass.calculateWords(textClass.readFile(path)));
+        System.out.println("Количестов знаков припинания в тексте " + textClass.claculatePunctuation(textClass.readFile(path)));
     }
 }

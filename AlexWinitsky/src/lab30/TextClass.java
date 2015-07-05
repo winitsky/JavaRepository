@@ -10,9 +10,9 @@ import java.io.IOException;
  * Created by Master on 06.06.2015.
  */
 public class TextClass {
-    public StringBuilder readFile() {
+    public StringBuilder readFile(String path) {
         StringBuilder text = new StringBuilder();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("./AlexWinitsky/src/lab30/Text.txt"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             String str = bufferedReader.readLine();
             while (str != null) {
                 text.append(str);
