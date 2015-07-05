@@ -9,10 +9,12 @@ import com.sun.org.apache.xpath.internal.SourceTree;
  */
 public class RunNumberInBinaryFile {
     public static void main(String[] args) {
+        String path = "./AlexWinitsky/src/lab32/Number.dat";
+
         BinaryFile binaryFile = new BinaryFile();
-        binaryFile.writeFile();
+        binaryFile.writeFile(path);
         System.out.println("Чила из двоичного файла");
-        binaryFile.printNumber(binaryFile.readFile());
-        System.out.println("Среднеарифметическое число " + binaryFile.arithmeticMean(binaryFile.readFile()));
+        binaryFile.printNumber(binaryFile.readFile(path));
+        System.out.println("Среднеарифметическое число " + binaryFile.arithmeticMean(binaryFile.readFile(path)));
     }
 }
