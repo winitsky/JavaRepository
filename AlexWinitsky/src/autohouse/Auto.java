@@ -6,11 +6,11 @@ package autohouse;
 public class Auto {
     private int id;
     private int year;
-    private double price;
+    private int price;
     private String carModel;
 
-    public Auto(  String carModel, int year, double price) {
-        this.id = (int)(Math.random()*1000);
+    public Auto(String carModel, int year, int price) {
+        this.id = (int) (Math.random() * 1000);
         this.year = year;
         this.price = price;
         this.carModel = carModel;
@@ -32,11 +32,11 @@ public class Auto {
         this.year = year;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -49,13 +49,40 @@ public class Auto {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Auto auto = (Auto) o;
+
+        if (id != auto.id) return false;
+        if (Double.compare(auto.price, price) != 0) return false;
+        if (year != auto.year) return false;
+        if (carModel != null ? !carModel.equals(auto.carModel) : auto.carModel != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = id;
+        result = 31 * result + year;
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (carModel != null ? carModel.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Auto{" +
                 "id=" + id +
                 ", carModel='" + carModel + '\'' +
                 ", year=" + year +
                 ", price=" + price +
-               '}';
+                '}';
     }
 
 

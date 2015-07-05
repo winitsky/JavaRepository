@@ -37,7 +37,7 @@ public class Menu {
         System.out.println("Для поиска автомобиля по цене введите 3");
         System.out.println("Для поиска автомобиля по году выпуска введите 4");
         System.out.println("Для сортировки автомобилей по году выпуска введите 5");
-        System.out.println("Для сортировки автомобилей по году выпуска введите 6");
+        System.out.println("Для сортировки автомобилей по цене введите 6");
         System.out.println("Для выхода из меню введите 0");
         System.out.println();
         System.out.println("Выберите один из пунктов меню");
@@ -61,9 +61,9 @@ public class Menu {
             System.out.println("Для выхода в главное меню нажмите 7");
             number = scanner.nextInt();
         } else if (number == 2) {
-            System.out.println("Введите ID автомобиля для удаления из списка");
-            int id = scanner.nextInt();
-            autoHouse.removeAuto(autoList, id);
+            System.out.println("Введите марку автомобиля для удаления из списка");
+            String nameCar = scanner.next();
+            autoHouse.removeAuto(autoList, nameCar);
             System.out.println("Для выхода в главное меню нажмите 7");
             number = scanner.nextInt();
         } else if (number == 3) {
@@ -98,6 +98,5 @@ public class Menu {
         if (number == 7) {
             menuCar();
         }
-
     }
 }

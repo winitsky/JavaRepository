@@ -7,14 +7,13 @@ import java.util.*;
  */
 public class AutoHouse {
 
-
-    public void removeAuto(Map<Integer, Auto> autoHouse, int number) {
+    public void removeAuto(Map<Integer, Auto> autoHouse, String nameAuto) {
         boolean id = false;
         for (Map.Entry<Integer, Auto> set : autoHouse.entrySet()) {
-            if (set.getKey() == number) {
+            if (set.getValue().getCarModel().compareTo(nameAuto) == 0) {
                 id = true;
-                autoHouse.remove(number);
-                System.out.println("Автомобиль с ID " + number + " удален из коллекции");
+                autoHouse.remove(set.getKey());
+                System.out.println("Автомобиль с марки " + nameAuto + " удален из коллекции");
                 break;
             }
         }
@@ -25,18 +24,18 @@ public class AutoHouse {
 
 
     public List<Auto> searchCarByYear(Map<Integer, Auto> autoHouse, int number) {
-        List<Auto> serachCar = new ArrayList<Auto>();
+        List<Auto> searchCar = new ArrayList<Auto>();
         boolean search = false;
         for (Map.Entry<Integer, Auto> set : autoHouse.entrySet()) {
             if (set.getValue().getYear() == number) {
-                serachCar.add(set.getValue());
+                searchCar.add(set.getValue());
                 search = true;
             }
         }
         if (!search) {
             System.out.println("В коллекции нет автомобилей с указанной датой");
         }
-        return serachCar;
+        return searchCar;
     }
 
     public List<Auto> searchCarByPrice(Map<Integer, Auto> autoHouse, int number) {
@@ -64,7 +63,7 @@ public class AutoHouse {
         List<Auto> autoByYear = new ArrayList<Auto>(autoList.values());
         Collections.sort(autoByYear, new Comparator<Auto>() {
             public int compare(Auto firstAuto, Auto secondAuto) {
-                return firstAuto.getYear() - secondAuto.getYear();
+                return Integer.compare(firstAuto.getYear(), secondAuto.getYear());
             }
         });
 
@@ -78,7 +77,7 @@ public class AutoHouse {
         List<Auto> autoByPrice = new ArrayList<Auto>(autoList.values());
         Collections.sort(autoByPrice, new Comparator<Auto>() {
             public int compare(Auto firstAuto, Auto secondAuto) {
-                return firstAuto.getYear() - secondAuto.getYear();
+                return Integer.compare(firstAuto.getPrice(), secondAuto.getPrice());
             }
         });
 
@@ -87,7 +86,6 @@ public class AutoHouse {
             System.out.println(sortAuto.getId() + " " + sortAuto.getCarModel() + " " + sortAuto.getPrice());
         }
     }
-
 
 }
 
