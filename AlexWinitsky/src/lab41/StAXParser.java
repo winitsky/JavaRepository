@@ -17,13 +17,12 @@ public class StAXParser {
         int x = 0;
         int y = 0;
         String unit = "";
-        Coordinates coordinate;
         List<Coordinates> coordinatesList = new ArrayList<>();
 
         XMLInputFactory factory = XMLInputFactory.newFactory();
         try {
             XMLStreamReader reader =
-                    factory.createXMLStreamReader(new FileInputStream("./src/lab41/point.xml"));
+                    factory.createXMLStreamReader(new FileInputStream("AlexWinitsky/src/lab41/point.xml"));
             while (reader.hasNext()) {
                 int res = reader.next();
                 if (res == reader.START_ELEMENT) {
@@ -35,8 +34,7 @@ public class StAXParser {
                     }
                     if (reader.getLocalName().equals("y")) {
                         y = Integer.valueOf(reader.getElementText());
-                        coordinate = new Coordinates(x, y, unit);
-                        coordinatesList.add(coordinate);
+                        coordinatesList.add(new Coordinates(x, y, unit));
                     }
                 }
             }
