@@ -29,7 +29,6 @@ public class Greeting {
             ResourceBundle resourceBundle = ResourceBundle.getBundle("lab35.MessagesBundle_ru_RU", locale);
             String greeting = resourceBundle.getString("greeting");
             System.out.println(greeting);
-            ;
         }
         if (language.compareTo("by") == 0) {
             Locale locale = new Locale("by", "By");
